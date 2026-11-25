@@ -1,0 +1,1209 @@
+{
+  "name": "NETCOMM - Assistant Prospection B2B",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "edf07c2e-1816-46da-8c0e-7073b556687e",
+      "name": "When clicking ‘Execute workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1824,
+        -608
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f68bd470-ac3d-41c2-bb0a-397dd755eeb0",
+              "name": "entreprise ",
+              "value": "Eurovanille ",
+              "type": "string"
+            },
+            {
+              "id": "60eff616-58d9-4128-af7f-2f8462190662",
+              "name": "pays",
+              "value": "France ",
+              "type": "string"
+            },
+            {
+              "id": "96e79b91-ca2b-49f7-b209-f95c4cd310b7",
+              "name": "produit",
+              "value": "Vanille de Madagascar ",
+              "type": "string"
+            },
+            {
+              "id": "6ffdf3e0-130a-4be6-ac3e-7e27e903474c",
+              "name": "type_client",
+              "value": "Vanilla Importer\nCocoa Importer\nSpice Wholesaler\nCocoa Trader\nVanilla Distributor\nCocoa Distributor\nFood Ingredients Manufacturer\nVanilla Extract Manufacturer\nChocolate Manufacturer\nArtisan Chocolate Maker\nBean-to-Bar Chocolate Maker\nPremium Chocolate Manufacturer\nCocoa Processor\nCocoa Butter Manufacturer\nCocoa Powder Manufacturer\nFlavor and Fragrance Industry\nBoulangerie \nParfumerie \nRestaurent ",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "469532a7-da94-4ee8-8f47-b96b86c01e30",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -1600,
+        -608
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE",
+          "mode": "list",
+          "cachedResultName": "NETCOMM-BASE DE DONNÉES  CLIENTS INTERNATIONAUX Vanille et Cacao ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Prospects",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Entreprise": "={{$json['entreprise ']}}  ",
+            "Pays": "={{$json.pays}}  ",
+            "Produit": "={{$json.produit}}",
+            "Site officiel": "={{$json.site_officiel}}",
+            "Type de client": "={{$json.type_client}}",
+            "Contact LinkedIn": "={{$json.contact_linkedin}}",
+            "Fonction": "={{$json.fonction}}",
+            "Email professionnel": "={{$json.email_professionnel}}",
+            "Source de vérification": "{{$json.source_verification}",
+            "Priorité": "={{$json.priorite}}",
+            "Statut": "={{$json.statut}}",
+            "Prochaine action": "{{$json.prochaine_action}",
+            "Date": "={{$json.date}} "
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Entreprise",
+              "displayName": "Entreprise",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Pays",
+              "displayName": "Pays",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Produit",
+              "displayName": "Produit",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Type de client",
+              "displayName": "Type de client",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Site officiel",
+              "displayName": "Site officiel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contact LinkedIn",
+              "displayName": "Contact LinkedIn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Fonction",
+              "displayName": "Fonction",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email professionnel",
+              "displayName": "Email professionnel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Source de vérification",
+              "displayName": "Source de vérification",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Priorité",
+              "displayName": "Priorité",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Statut",
+              "displayName": "Statut",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Prochaine action",
+              "displayName": "Prochaine action",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "4a2b5464-d790-476d-9bdf-93d4370f9408",
+      "name": "Append row in sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1376,
+        -608
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ce5BjdhonNw17I9C",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "6d0fe299-ad07-4a7e-9a20-6b40eb21e543",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        -944,
+        -656
+      ],
+      "webhookId": "be5ca00b-ed68-4dd6-8fc0-9085a396e7e4"
+    },
+    {
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "OUTPUT RULES (highest priority):\n- Return ALL prospects in the \"prospects\" array, one object per company.\n- If the user asks for a specific number of companies (e.g. 10), return exactly that many distinct real companies. Default to 10 when no number is given.\n- If the user names a country or region (e.g. France), only return companies based in that country/region, and use several searches to find enough of them.\n- Write field values in French where possible.\n\nAct as an expert international B2B market research assistant for NETCOMM, a Madagascar-based exporter of vanilla and cacao.\n\nYour mission is to find genuine international importers, wholesalers, distributors, manufacturers, chocolatiers and industrial buyers of Madagascar vanilla and cacao beans worldwide.\n\nSearch globally across all continents:\n\n- Europe\n- North America\n- South America\n- Asia\n- Middle East\n- Africa\n- Oceania\n\nUse Tavily web search to identify real companies and gather publicly available information.\n\nFor each prospect, provide:\n\n1. Company name\n2. Country\n3. Product of interest (vanilla, cacao, or both)\n4. Buyer type\n5. Official website\n6. Public LinkedIn company or contact profile\n7. Relevant contact person's role, if verified\n8. Professional email, only if publicly verified\n9. Source URLs used for verification\n10. Priority (A, B, or C)\n11. Prospect status\n12. Recommended next action\n\nNever invent companies, people, email addresses or contact details. If information cannot be verified, write \"To verify\".\n\nPrioritize companies that import, distribute, process or purchase vanilla and cacao in commercial quantities.\n\nReturn clear, structured results suitable for saving in the NETCOMM Google Sheets prospect database.\n\nWEB RESEARCH REQUIREMENT:\nAlways use the Tavily web search tool to research potential B2B buyers.\nVerify company information using official websites and reliable sources.\nProvide source URLs for every prospect.\nNever invent email addresses, contact names or LinkedIn profiles.\nIf information cannot be verified, write \"To verify\".\nPrioritize genuine importers, wholesalers, distributors and manufacturers of Madagascar vanilla and cocoa.\n\nDUPLICATE PREVENTION — MANDATORY:\n\n- Never return Eurovanille unless the user explicitly requests it.\n- Never repeat the same company within a single prospect list.\n- Do not reuse companies from previous search results when new companies are requested.\n- Search for different genuine companies using multiple independent Tavily searches.\n- Every prospect must be a distinct, real company with evidence of relevant B2B activity.\n- If you cannot find enough verified companies, return fewer rather than inventing or repeating companies.\n- Do not use previous AI outputs as new research evidence.",
+          "maxIterations": 3
+        }
+      },
+      "id": "2c113a32-a888-4296-9189-aed45e3bcd3a",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -672,
+        -640
+      ]
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.5-flash",
+        "options": {}
+      },
+      "id": "c1e3cda6-2e62-47f7-a82a-5bdf9b561499",
+      "name": "Google Gemini Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        -960,
+        -176
+      ],
+      "credentials": {
+        "googlePalmApi": {
+          "id": "M7Y8J1G93RAGdiQ9",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "topic": "general",
+        "searchDepth": "basic",
+        "includeAnswer": "basic",
+        "options": {
+          "max_results": 5
+        }
+      },
+      "id": "c8f66d78-1212-47ad-a0b2-2e27ca1c1b83",
+      "name": "Search the web in Tavily",
+      "type": "@tavily/n8n-nodes-tavily.tavilyTool",
+      "typeVersion": 2.1,
+      "position": [
+        -576,
+        -384
+      ],
+      "credentials": {
+        "tavilyApi": {
+          "id": "Mh3Vm8pjukq8zn8c",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"prospects\": [\n    {\n      \"entreprise\": \"Nielsen-Massey Vanillas\",\n      \"pays\": \"USA\",\n      \"produit\": \"Vanilla\",\n      \"type_client\": \"Importer\",\n      \"site_officiel\": \"https://nielsenmassey.com\",\n      \"contact_linkedin\": \"To verify\",\n      \"fonction\": \"Purchasing Manager\",\n      \"email_professionnel\": \"To verify\",\n      \"source_verification\": \"https://nielsenmassey.com/about\",\n      \"priorite\": \"A\",\n      \"statut\": \"À vérifier\",\n      \"prochaine_action\": \"Contacter le service achats\"\n    }\n  ]\n}"
+      },
+      "id": "fa8c9ab8-80fe-4372-ab7e-0b58ffc148d7",
+      "name": "Structured Output Parser1",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -464,
+        -384
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output.prospects",
+        "options": {}
+      },
+      "id": "e92c0414-94a5-4ce7-b641-5bf5d0df10af",
+      "name": "Une ligne par entreprise",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        -640
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE",
+          "mode": "list",
+          "cachedResultName": "NETCOMM-BASE DE DONNÉES  CLIENTS INTERNATIONAUX Vanille et Cacao ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Prospects",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Entreprise": "={{$json.entreprise}}",
+            "Pays": "={{$json.pays}}",
+            "Produit": "={{$json.produit}}",
+            "Type de client": "={{$json.type_client}}",
+            "Site officiel": "={{$json.site_officiel}}",
+            "Contact LinkedIn": "={{$json.contact_linkedin}}",
+            "Fonction": "={{$json.fonction}}",
+            "Email professionnel": "={{$json.email_professionnel}}",
+            "Source de vérification": "={{$json.source_verification}}",
+            "Priorité": "={{$json.priorite}}",
+            "Statut": "={{$json.statut}}",
+            "Prochaine action": "={{$json.prochaine_action}}",
+            "Date": "={{ $now.toFormat(\"yyyy-MM-dd\") }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Entreprise",
+              "displayName": "Entreprise",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Pays",
+              "displayName": "Pays",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Produit",
+              "displayName": "Produit",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Type de client",
+              "displayName": "Type de client",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Site officiel",
+              "displayName": "Site officiel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contact LinkedIn",
+              "displayName": "Contact LinkedIn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Fonction",
+              "displayName": "Fonction",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email professionnel",
+              "displayName": "Email professionnel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Source de vérification",
+              "displayName": "Source de vérification",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Priorité",
+              "displayName": "Priorité",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Statut",
+              "displayName": "Statut",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Prochaine action",
+              "displayName": "Prochaine action",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "bfb78d0a-0146-48af-920b-ef098231f135",
+      "name": "Append row in sheet2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -80,
+        -640
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ce5BjdhonNw17I9C",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Act as an international B2B market research assistant for NETCOMM, a Madagascar-based exporter of vanilla and cocoa.  Your mission is to analyze potential international buyers of Madagascar vanilla and cocoa.  Target customers: - Vanilla and cocoa importers - Spice wholesalers and distributors - Cocoa traders - Chocolate manufacturers - Artisan and Bean-to-Bar chocolate makers - Food ingredient manufacturers - Vanilla extract manufacturers - Cocoa processors , Parfumeries-Boulengereie-Grand Restaurent.  For each prospect, identify: 1. Company name 2. Country 3. Product of interest 4. Customer type 5. Official website 6. LinkedIn contact 7. Relevant job title 8. Professional email 9. Verification source 10. Priority: A, B or C  Never invent company details, contacts or email addresses. Mark unavailable information as \"To verify\". Respond in a clear, structured format."
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "id": "20856f07-5ad4-4dd9-9025-d43cd433c61e",
+      "name": "Basic LLM Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        -1664,
+        -352
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "2cad2440-f21e-4b3a-9d6c-5c1870a23d26",
+      "name": "Google Gemini Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        -1664,
+        -160
+      ],
+      "credentials": {
+        "googlePalmApi": {
+          "id": "M7Y8J1G93RAGdiQ9",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"entreprise\": \"Eurovanille\",\n  \"pays\": \"France\",\n  \"produit\": \"Vanille de Madagascar\",\n  \"type_client\": \"Importateur\",\n  \"site_officiel\": \"https://www.eurovanille.com\",\n  \"contact_linkedin\": \"\",\n  \"fonction\": \"Responsable Achats\",\n  \"email_professionnel\": \"\",\n  \"source_verification\": \"Site officiel de l'entreprise\",\n  \"priorite\": \"A\",\n  \"statut\": \"A contacter\",\n  \"prochaine_action\": \"Envoyer une présentation commerciale\",\n  \"date\": \"2026-11-23\"\n}"
+      },
+      "id": "d6af6448-0ce5-4319-854e-2cd7b74bf341",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -1520,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE",
+          "mode": "list",
+          "cachedResultName": "NETCOMM-BASE DE DONNÉES  CLIENTS INTERNATIONAUX Vanille et Cacao ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Prospects",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Entreprise": "={{$json.output.entreprise}}",
+            "Pays": "={{$json.output.pays}}",
+            "Type de client": "={{$json.output.type_client}}",
+            "Site officiel": "={{$json.output.site_officiel}}",
+            "Produit": "={{$json.output.produit}}",
+            "Contact LinkedIn": "={{$json.output.contact_linkedin}}",
+            "Fonction": "={{$json.output.fonction}}",
+            "Email professionnel": "={{$json.output.email_professionnel}}",
+            "Source de vérification": "={{$json.output.source_verification}}",
+            "Priorité": "={{$json.output.priorite}}",
+            "Statut": "={{$json.output.statut}}",
+            "Prochaine action": "={{$json.output.prochaine_action}}",
+            "Date": "={{$json.output.date}}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Entreprise",
+              "displayName": "Entreprise",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Pays",
+              "displayName": "Pays",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Produit",
+              "displayName": "Produit",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Type de client",
+              "displayName": "Type de client",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Site officiel",
+              "displayName": "Site officiel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contact LinkedIn",
+              "displayName": "Contact LinkedIn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Fonction",
+              "displayName": "Fonction",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email professionnel",
+              "displayName": "Email professionnel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Source de vérification",
+              "displayName": "Source de vérification",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Priorité",
+              "displayName": "Priorité",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Statut",
+              "displayName": "Statut",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Prochaine action",
+              "displayName": "Prochaine action",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "5a7de9e8-8a3a-4c7e-b0c1-bbf989643611",
+      "name": "Append row in sheet1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1296,
+        -352
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ce5BjdhonNw17I9C",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "query": "=Find international importers, wholesalers, distributors, manufacturers and industrial buyers of Madagascar vanilla and cocoa beans worldwide. Search across all continents, including Europe, North America, South America, Asia, Middle East, Africa and Oceania. Identify company names, countries, official websites, purchasing or sourcing contacts, LinkedIn profiles and publicly listed professional email addresses. Provide reliable source URLs and never invent contact details.",
+        "options": {}
+      },
+      "id": "5bc05511-5d44-4468-acda-5ce3a54bd2ab",
+      "name": "Search the web",
+      "type": "@tavily/n8n-nodes-tavily.tavily",
+      "typeVersion": 2.1,
+      "position": [
+        -960,
+        -448
+      ],
+      "credentials": {
+        "tavilyApi": {
+          "id": "Mh3Vm8pjukq8zn8c",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE",
+          "mode": "list",
+          "cachedResultName": "NETCOMM-BASE DE DONNÉES  CLIENTS INTERNATIONAUX Vanille et Cacao ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Prospects",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        64,
+        -208
+      ],
+      "id": "2119f0d8-3082-44ba-b987-29ef1d0c1ee1",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ce5BjdhonNw17I9C",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "compare": "selectedFields",
+        "fieldsToCompare": "Entreprise",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2,
+      "position": [
+        -304,
+        -400
+      ],
+      "id": "c842774f-61f0-4243-8242-812b724b8839",
+      "name": "Remove Duplicates"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "Entreprise ",
+        "joinMode": "keepNonMatches",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        48,
+        -384
+      ],
+      "id": "1cbffc6c-29ab-44c8-950f-949324519e19",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE",
+          "mode": "list",
+          "cachedResultName": "NETCOMM-BASE DE DONNÉES  CLIENTS INTERNATIONAUX Vanille et Cacao ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Prospects",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XiZZXcE-ScVx9fNuoelbAD8-gJqefzc3fen_1CA6mcE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Entreprise": "={{$json.entreprise}}",
+            "Pays": "={{$json.pays}}",
+            "Produit": "={{$json.produit}}",
+            "Type de client": "={{$json.type_client}}",
+            "Site officiel": "={{$json.site_officiel}}",
+            "Contact LinkedIn": "={{$json.contact_linkedin}}",
+            "Fonction": "={{$json.fonction}}",
+            "Email professionnel": "={{$json.email_professionnel}}",
+            "Source de vérification": "={{$json.source_verification}}",
+            "Priorité": "={{$json.priorite}}",
+            "Statut": "={{$json.statut}}",
+            "Prochaine action": "={{$json.prochaine_action}}",
+            "Date": "={{ $now.toFormat(\"yyyy-MM-dd\") }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Entreprise",
+              "displayName": "Entreprise",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Pays",
+              "displayName": "Pays",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Produit",
+              "displayName": "Produit",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Type de client",
+              "displayName": "Type de client",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Site officiel",
+              "displayName": "Site officiel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contact LinkedIn",
+              "displayName": "Contact LinkedIn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Fonction",
+              "displayName": "Fonction",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email professionnel",
+              "displayName": "Email professionnel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Source de vérification",
+              "displayName": "Source de vérification",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Priorité",
+              "displayName": "Priorité",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Statut",
+              "displayName": "Statut",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Prochaine action",
+              "displayName": "Prochaine action",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "232e186c-c8ba-422e-905e-202d0680c567",
+      "name": "Append row in sheet3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        368,
+        -384
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ce5BjdhonNw17I9C",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-20b",
+        "options": {
+          "maxTokensToSample": 1000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        -736,
+        -384
+      ],
+      "id": "7787c68b-bb50-497e-9ac6-1cb1d4ef7dc0",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "N7v4jCxHDahAEsMt",
+          "name": "Groq account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Une ligne par entreprise",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Search the web in Tavily": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Une ligne par entreprise": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search the web": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": true
+  },
+  "versionId": "f48e470d-ee1b-4a98-92c8-2756571bdbd5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8ba0597c32518131b7c15de45c44fafc567a072bfee80c9b0400708a3ef9793b"
+  },
+  "nodeGroups": [],
+  "id": "fYdSSRDKoql8AvtV",
+  "tags": []
+}
